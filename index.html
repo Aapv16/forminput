@@ -43,25 +43,29 @@
   <body>
     <!-- start navbar -->
     <nav
-      class="navbar navbar-expand-lg fixed-top p-3 mb-3 bg-body-transparent bg-white border-bottom border-secondary"
+      class="navbar navbar-expand-lg fixed-top p-3 mb-3 bg-body-transparent bg-white border-bottom border-warning"
     >
       <div class="container-fluid">
         <!-- class container agar ketengah -->
         <a class="navbar-brand fw-bold text-secondary d-lg-flex d-none" href="#"
           ><img src="logo.png" width="150px" alt=""
         /></a>
+
         <!-- jika d-lg-flex maka hanya muncul pada layar lebar selain itu d-none -->
 
         <!-- start humburger -->
+        <h6 class="justify-content-start fs-6 fst-italic">Divas Assitant</h6>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler bg-secondary border border-3 rounded border-seconday-subtle"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <div class="">
+            <i class="bi bi-list text-bg-secondary"></i>
+          </div>
         </button>
         <!-- end humburger -->
 
@@ -73,9 +77,9 @@
           aria-labelledby="offcanvasNavbarLabel"
         >
           <!-- start header canvas collaps -->
-          <div class="offcanvas-header border-bottom">
+          <div class="offcanvas-header border-bottom border-warning">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="logo.png" width="150px" alt="" />
+              <h5>NSIA Assitant</h5>
             </h5>
             <button
               type="button"
@@ -102,43 +106,54 @@
                   aria-current="page"
                   href="#"
                 >
-                  <i class="bi bi-house-door me-1 d-lg-none fs-3 me-3"></i
-                  >Home</a
-                >
+                  <h4>
+                    <i class="bi bi-house me-1 d-lg-none fs-3 me-3"></i>Home
+                  </h4>
+                </a>
                 <!-- akan hilang pada layar besar -->
               </li>
 
               <li class="nav-item me-4">
-                <a
-                  class="nav-link d-md-block"
-                  aria-current="page"
-                  href="#profil"
-                >
-                  <i class="bi bi-person-badge me-1 d-lg-none fs-3 me-3"></i
-                  >Profil</a
-                >
+                <h4>
+                  <a
+                    class="nav-link d-md-block"
+                    aria-current="page"
+                    href="#profil"
+                  >
+                    <i class="bi bi-person-square me-1 d-lg-none fs-3 me-3"></i
+                    >Divas Assitant</a
+                  >
+                </h4>
+
                 <!-- akan hilang pada layar besar -->
               </li>
 
               <li class="nav-item me-4">
-                <a
-                  class="nav-link d-md-block"
-                  aria-current="page"
-                  href="#about"
-                >
-                  <i class="bi bi-journals me-1 d-lg-none fs-3 me-3"></i
-                  >About</a
-                >
+                <h4>
+                  <a
+                    class="nav-link d-md-block"
+                    aria-current="page"
+                    href="#about"
+                  >
+                    <i class="bi bi-backpack2 me-1 d-lg-none fs-3 me-3"></i
+                    >About</a
+                  >
+                </h4>
                 <!-- akan hilang pada layar besar -->
               </li>
-
-              <li class="nav-item me-4">
-                <a class="nav-link d-md-block" aria-current="page" href="#form">
-                  <i class="bi bi-calendar2-event me-1 d-lg-none fs-3 me-3"></i
-                  >Kontak</a
-                >
-                <!-- akan hilang pada layar besar -->
-              </li>
+              <h4>
+                <li class="nav-item me-4">
+                  <a
+                    class="nav-link d-md-block"
+                    aria-current="page"
+                    href="#form"
+                  >
+                    <i class="bi bi-telephone-plus me-1 d-lg-none fs-3 me-3"></i
+                    >Kontak</a
+                  >
+                  <!-- akan hilang pada layar besar -->
+                </li>
+              </h4>
             </ul>
             <!-- end content -->
           </div>
@@ -275,6 +290,17 @@
                 <option value="2">Penyakit dan kebutuhan emergency</option>
               </select>
               <!-- param 4  -->
+
+              <!-- btn submt -->
+              <button
+                type="submit"
+                href="submit"
+                class="btn btn-primary mb-5 text-center w-100 btn-kirim"
+              >
+                Submit
+              </button>
+              <!-- btn submit -->
+
               <div id="cardHasil" class="pt-2 mb-5 card">
                 <p id="hasilSkor" class="text-center">Hasil:</p>
                 <p id="kategori" class="text-center"></p>
@@ -295,14 +321,6 @@
                 </p>
                 <!-- end modal 3 -->
               </div>
-
-              <button
-                type="submit"
-                href="submit"
-                class="btn btn-primary mb-5 btn-custom btn-kirim"
-              >
-                Submit
-              </button>
 
               <button
                 class="d-none btn btn-primary mb-5 btn-custom btn-loading"
