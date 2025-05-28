@@ -170,10 +170,11 @@
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6 card-custom">
             <!--  -->
-            <h2 class="text-center p-3 border-bottom border-warning mb-4">
+            <!-- <h2 class="text-center p-3 border-bottom border-warning mb-4">
               Divas Score
-            </h2>
-            <!-- alerts -->
+            </h2> -->
+
+            <!-- alerts info submit -->
             <div
               class="alert alert-success text-center d-none alert-dismissible fade show"
               role="alert"
@@ -187,12 +188,12 @@
                 aria-label="Close"
               ></button>
             </div>
-            <!-- alerts -->
+            <!-- alerts info submit -->
 
             <!-- start form -->
             <form name="submit-sheet" onsubmit="hitungPivas(event)">
-              <!-- start essay -->
-              <div class="mb-1">
+              <!-- start essay 1-->
+              <div class="mb-1 mt-2">
                 <h6 for="name" class="form-label">Nama lengkap</h6>
                 <input
                   type="text"
@@ -203,9 +204,9 @@
                   autocomplete="off"
                   required
                 />
-                <!-- <div id="name" class="form-text">We'll never share your email with anyone else.</div> -->
               </div>
-
+              <!-- end essay 1 -->
+              <!-- start essay 2 -->
               <div class="mb-1">
                 <h6 for="asalRuangan" class="form-label">NIK</h6>
                 <input
@@ -217,9 +218,10 @@
                   autocomplete="off"
                   required
                 />
-                <!-- <div id="name" class="form-text">We'll never share your email with anyone else.</div> -->
               </div>
+              <!-- end essay 2 -->
 
+              <!-- end essay 3 -->
               <div class="mb-1">
                 <h6 for="asalRuangan" class="form-label">Asal Ruangan</h6>
                 <input
@@ -231,13 +233,13 @@
                   autocomplete="off"
                   required
                 />
-                <!-- <div id="name" class="form-text">We'll never share your email with anyone else.</div> -->
               </div>
-              <!-- start essay -->
+              <!-- end essay 3 -->
 
               <!-- param1 -->
               <h6 class="opacity-100">Penampakan vena :</h6>
               <select
+                name="penampakan-vena"
                 size="sm"
                 class="mb-3 form-select"
                 aria-label="Default select example"
@@ -251,6 +253,8 @@
               <!-- param2 -->
               <h6 className="opacity-100">Vena teraba :</h6>
               <select
+                `
+                name="vena-teraba"
                 size="sm"
                 class="mb-3 form-select"
                 aria-label="Default select example"
@@ -264,6 +268,7 @@
               <!-- param 3  -->
               <h6 class="opacity-100">Riwayat infus sulit :</h6>
               <select
+                name="riwayat-infus-sulit"
                 size="sm"
                 class="mb-1 form-select"
                 aria-label="Default select example"
@@ -277,6 +282,7 @@
               <!-- param 4 -->
               <h6 class="opacity-100 mt-2">Faktor tambahan :</h6>
               <select
+                name="faktor-tambahan"
                 size="sm"
                 class="mb-2 form-select"
                 aria-label="Default select example"
@@ -301,26 +307,179 @@
               </button>
               <!-- btn submit -->
 
-              <div id="cardHasil" class="pt-2 mb-5 card">
-                <p id="hasilSkor" class="text-center">Hasil:</p>
-                <p id="kategori" class="text-center"></p>
+              <div id="cardHasil" class="pt-2 mb-5 car">
+                <p
+                  id="hasilSkor"
+                  class="text-center w-auto fs-5"
+                  style="margin-bottom: -0.2rem"
+                >
+                  Hasil:
+                </p>
+                <p
+                  id="kategori"
+                  class="text-center w-auto fs-6"
+                  style="margin-bottom: 0.5rem"
+                ></p>
 
                 <!-- start modal 1 -->
-                <p id="advice1" class="d-none btn btn-primary w-25 mx-auto">
-                  advice1
+                <p
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal1"
+                  id="advice1"
+                  class="d-none btn btn-primary text-center w-25"
+                >
+                  Advice
                 </p>
                 <!-- end modal 1 -->
                 <!-- start modal 2 -->
-                <p id="advice2" class="d-none btn btn-primary w-25 mx-auto">
-                  advice2
+                <p
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                  id="advice2"
+                  class="d-none btn btn-primary w-25 mx-auto"
+                >
+                  advice
                 </p>
                 <!-- end modal 2 -->
                 <!-- start modal 3 -->
-                <p id="advice3" class="d-none btn btn-primary w-25 mx-auto">
-                  advice3
+                <p
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal3"
+                  id="advice3"
+                  class="d-none btn btn-primary w-25 mx-auto"
+                >
+                  Advice
                 </p>
                 <!-- end modal 3 -->
               </div>
+
+              <!-- Modal 1-->
+              <div
+                class="modal fade"
+                id="exampleModal1"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Rendah
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      Tindakan: Lakukan pemasangan IV kateter
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <!-- <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal 1 -->
+              <!-- Modal 2-->
+              <div
+                class="modal fade"
+                id="exampleModal2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Sedang
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      Tindakan: Pemasangan akses diberikan kepada petugas yang
+                      lebih kompeten. Konsul ke tim Infus atau Spesialis akses
+                      vaskular.
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <!-- <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal 2 -->
+              <!-- Modal 3-->
+              <div
+                class="modal fade"
+                id="exampleModal3"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel3"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        tinggi
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      Tindakan: Pertimbangkan pemasangan akses emergency (CVC,
+                      IO). Konsul Spesialis akses vaskular.
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <!-- <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal 3 -->
+              <!-- end info box modal -->
 
               <button
                 class="d-none btn btn-primary mb-5 btn-custom btn-loading"
@@ -424,7 +583,7 @@
       if (totalPivas <= 3) {
         kategori = "rendah";
         card.className =
-          "card p-3 mb-3 border border-success bg-success-subtle text-success-emphasis";
+          "card p-3 mb-3 border border-success bg-success-subtle text-center text-success-emphasis";
         box1.className =
           "btn border-secondary  border btn-success mx-auto w-50";
         box2.className = " d-none btn btn-primary mx-auto w-20";
