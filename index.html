@@ -306,8 +306,21 @@
                 Submit
               </button>
               <!-- btn submit -->
+              <!-- btn load submit -->
+              <button
+                class="d-none btn btn-primary mb-5 btn-custom w-100 btn-loading"
+                type="button"
+                disabled
+              >
+                <span
+                  class="spinner-border spinner-border-sm mx-2 mt-1"
+                  aria-hidden="true"
+                ></span>
+                <span role="status">Loading...</span>
+              </button>
+              <!-- btn load submit -->
 
-              <div id="cardHasil" class="pt-2 mb-5 car">
+              <div id="cardHasil" style="margin-top: -2rem" class="pt-2 mb-5">
                 <p
                   id="hasilSkor"
                   class="text-center w-auto fs-5"
@@ -327,7 +340,7 @@
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal1"
                   id="advice1"
-                  class="d-none btn btn-primary text-center w-25"
+                  class="d-none btn btn-primary text-center w-25 btn-info-custom"
                 >
                   Advice
                 </p>
@@ -480,18 +493,6 @@
               </div>
               <!-- modal 3 -->
               <!-- end info box modal -->
-
-              <button
-                class="d-none btn btn-primary mb-5 btn-custom btn-loading"
-                type="button"
-                disabled
-              >
-                <span
-                  class="spinner-border spinner-border-sm mx-2 mt-1"
-                  aria-hidden="true"
-                ></span>
-                <span role="status">Loading...</span>
-              </button>
             </form>
             <!-- end form -->
           </div>
@@ -541,7 +542,7 @@
       // tampilkan tombol loadaing dan hilangkan tombol kirim
 
       btnLoading.classList.toggle("d-none");
-      // js mintol carikan di didalam class btn-loadaing apakah ada d-none?, kalau ada hilangkan ya tapi kalau tidak ada di kasih ya.
+      // js mintol carikan di didalam list class btn-lodaing apakah ada d-none?, kalau ada hilangkan ya tapi kalau tidak ada di kasih ya.
       btnKirim.classList.toggle("d-none");
 
       fetch(scriptURL, { method: "POST", body: new FormData(form) })
@@ -552,6 +553,10 @@
           // tampilkan alert
           alert.classList.toggle("d-none");
           // reset isi form
+
+          // tampilkan modal info-
+
+          // end tampilan modal info-custom
 
           form.reset();
 
