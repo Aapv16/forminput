@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NsiAssitant</title>
+
+    <!--Bootsrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap logo -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!---Fon-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feater-icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Feater-icon -->
+
+    <!-- Style local -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsif.css" />
+    <!-- style local -->
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS -->
+  </head>
+
+  <body>
+    <!-- start navbar -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top p-3 mb-3 bg-body-transparent bg-white border-bottom border-warning"
+    >
+      <div class="container-fluid">
+        <!-- class container agar ketengah -->
+        <a class="navbar-brand fw-bold text-secondary d-lg-flex d-none" href="#"
+          ><img src="logo.png" width="150px" alt=""
+        /></a>
+
+        <!-- jika d-lg-flex maka hanya muncul pada layar lebar selain itu d-none -->
+
+        <!-- start humburger -->
+        <h6 class="justify-content-start fs-6 fst-italic">Divas Assitant</h6>
+        <button
+          class="navbar-toggler bg-secondary border border-3 rounded border-seconday-subtle"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div class="">
+            <i class="bi bi-list text-bg-secondary"></i>
+          </div>
+        </button>
+        <!-- end humburger -->
+
+        <!-- start canvas collaps -->
+        <div
+          class="offcanvas offcanvas-start w-75 bg-white"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <!-- start header canvas collaps -->
+          <div class="offcanvas-header border-bottom border-warning">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <h5>NSIA Assitant</h5>
+            </h5>
+            <button
+              type="button"
+              class="btn-close bg-danger"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- end header canvas collaps -->
+
+          <!-- start collaps conten -->
+          <div class="offcanvas-body mx-lg-auto col-lg-4">
+            <!-- mx-lg-auto untuk tulisan ke tengah secara otomatis saat layar lg -->
+
+            <ul
+              id="navbar"
+              class="navbar-nav justify-content-start flex-grow-1 pe-3 d-lg-flex d-md-block"
+            >
+              <!-- mx-lg-auto aga tulisan nav ke tengah -->
+              <!-- pake d-block agar sejajar -->
+              <li class="nav-item me-3">
+                <a
+                  class="nav-link active d-md-block"
+                  aria-current="page"
+                  href="/fallsedang.html"
+                >
+                  <h4>
+                    <i class="bi bi-house me-1 d-lg-none fs-3 me-3"></i>Home
+                  </h4>
+                </a>
+                <!-- akan hilang pada layar besar -->
+              </li>
+
+              <li class="nav-item me-4">
+                <h4>
+                  <a
+                    class="nav-link d-md-block"
+                    aria-current="page"
+                    href="#profil"
+                  >
+                    <i class="bi bi-person-square me-1 d-lg-none fs-3 me-3"></i
+                    >Divas Assitant</a
+                  >
+                </h4>
+
+                <!-- akan hilang pada layar besar -->
+              </li>
+
+              <li class="nav-item me-4">
+                <h4>
+                  <a
+                    class="nav-link d-md-block"
+                    aria-current="page"
+                    href="#about"
+                  >
+                    <i class="bi bi-backpack2 me-1 d-lg-none fs-3 me-3"></i
+                    >About</a
+                  >
+                </h4>
+                <!-- akan hilang pada layar besar -->
+              </li>
+              <h4>
+                <li class="nav-item me-4">
+                  <a
+                    class="nav-link d-md-block"
+                    aria-current="page"
+                    href="#form"
+                  >
+                    <i class="bi bi-telephone-plus me-1 d-lg-none fs-3 me-3"></i
+                    >Kontak</a
+                  >
+                  <!-- akan hilang pada layar besar -->
+                </li>
+              </h4>
+            </ul>
+            <!-- end content -->
+          </div>
+        </div>
+        <!-- end canvas collaps -->
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- data-aos="fade-up"
+    data-aos-delay="20"
+    data-aos-duration="1000" -->
+
+    <section>
+      <div class="mt-5 pt-5" style="width: auto">
+        <img src="/falllll/5.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <!-- <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card’s content.
+          </p> -->
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- script -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- script -->
+  <!-- script local -->
+  <script src="script.js"></script>
+  <!-- end script local -->
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
+  <!-- AOS -->
+
+  <!-- kontak form -->
+  <!-- <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxoPpG2GzYOA8erWLMh9ZsOs0mrjNJVIgixZBC_8xRnwk162el1Jqsh2T9Vpz717pjIBw/exec";
+    const form = document.forms["submit-sheet"];
+    const btnKirim = document.querySelector(".btn-kirim");
+    const btnLoading = document.querySelector(".btn-loading");
+    const alert = document.querySelector(".alert");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // ketika btn-kirim di klik
+      // tampilkan tombol loadaing dan hilangkan tombol kirim
+      btnLoading.classList.toggle("d-none");
+      // js mintol carikan di didalam list class btn-lodaing apakah ada d-none?, kalau ada hilangkan ya tapi kalau tidak ada di kasih ya.
+      btnKirim.classList.toggle("d-none");
+
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          // tampilkana btn kirim lalu hilangkan tombol loadaing
+          btnLoading.classList.toggle("d-none");
+          btnKirim.classList.toggle("d-none");
+          // tampilkan alert
+          alert.classList.toggle("d-none");
+          // reset isi form
+          // tampilkan modal info-
+          // end tampilan modal info-custom
+          form.reset();
+          console.log("Success!", response);
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+    // funtion validasi
+  </script> -->
+
+  <!-- kontak form -->
+
+  <!-- <script>
+    // form
+    function hitungPivas(e) {
+      e.preventDefault(); // ini mencegah reload
+      const venaTampak = parseInt(document.getElementById("venaTampak").value);
+      const venaTeraba = parseInt(document.getElementById("venaTeraba").value);
+      const sulitInfus = parseInt(document.getElementById("sulitInfus").value);
+      const faktor = parseInt(document.getElementById("faktor").value);
+
+      const totalPivas = venaTampak + venaTeraba + sulitInfus + faktor;
+
+      let kategori = "";
+      let card = document.getElementById("cardHasil");
+      let box1 = document.getElementById("advice1");
+      let box2 = document.getElementById("advice2");
+      let box3 = document.getElementById("advice3");
+
+      if (totalPivas <= 3) {
+        kategori = "rendah";
+        card.className =
+          "card p-3 mb-3 border border-success bg-success-subtle text-center text-success-emphasis";
+        box1.className =
+          "btn border-secondary  border btn-success mx-auto w-50";
+        box2.className = " d-none btn btn-primary mx-auto w-20";
+        box3.className = "d-none btn btn-primary mx-auto w-20";
+      } else if (totalPivas <= 5) {
+        kategori = "sedang";
+        card.className =
+          "card p-3 mb-3 border border-warning bg-warning-subtle text-success-emphasis";
+        box2.className = "btn border border-secondary btn-warning mx-auto w-50";
+        box1.className = " d-none btn btn-primary mx-auto w-25";
+        box3.className = "d-none btn btn-primary mx-auto w-25";
+      } else {
+        kategori = "tinggi";
+        card.className =
+          "card p-3 mb-3 border border-danger bg-danger-subtle text-success-emphasis";
+        box3.className = "btn border-secondary btn-danger mx-auto w-50";
+        box1.className = " d-none btn btn-primary mx-auto w-25";
+        box2.className = "d-none btn btn-primary mx-auto w-25";
+      }
+
+      document.getElementById("hasilSkor").innerHTML =
+        "Total Skor : " + totalPivas;
+      document.getElementById("kategori").innerText = "Kategori: " + kategori;
+    }
+    // end form
+  </script> -->
+</html>
